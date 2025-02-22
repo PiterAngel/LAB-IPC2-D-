@@ -1,0 +1,32 @@
+<empresa>
+    <departamento departamento="Ventas">
+        <empleado id="1">
+            <nombre>Juan Pérez</nombre>
+            <salario>50000</salario>
+        </empleado>
+        <empleado id="2">
+            <nombre>Ana Gómez</nombre>
+            <salario>60000</salario>
+        </empleado>
+    </departamento>
+    <departamento departamento="Marketing">
+        <empleado id="3">
+            <nombre>Pedro Ruiz</nombre>
+            <salario>55000</salario>
+        </empleado>
+        <empleado id="4">
+            <nombre>IPC2</nombre>
+            <salario>10000</salario>
+        </empleado>
+    </departamento>
+    <departamento departamento="RRHH">
+        <empleado id="5">
+            <nombre>Karen Herrera</nombre>
+            <salario>60000</salario>
+        </empleado>
+        <empleado id="7">
+            <nombre>Adriana</nombre>
+            <salario>10000</salario>
+        </empleado>
+    </departamento>
+</empresa>

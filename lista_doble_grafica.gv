@@ -1,0 +1,10 @@
+// Lista Doble
+digraph {
+	nodo0 [label=10]
+	nodo0 -> nodo1 [constraint=true]
+	nodo1 -> nodo0 [constraint=true]
+	nodo1 [label=20]
+	nodo1 -> nodo2 [constraint=true]
+	nodo2 -> nodo1 [constraint=true]
+	nodo2 [label=30]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospital>
+    <paciente>
+        <nombre>Juan Pérez</nombre>
+        <edad>45</edad>
+        <tipo>urgencia</tipo>
+    </paciente>
+    <paciente>
+        <nombre>María García</nombre>
+        <edad>32</edad>
+        <tipo>consulta</tipo>
+    </paciente>
+    <paciente>
+        <nombre>Carlos López</nombre>
+        <edad>28</edad>
+        <tipo>urgencia</tipo>
+    </paciente>
+</hospital>

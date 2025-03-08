@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospital>
+    <paciente>
+        <nombre>Ola</nombre>
+        <edad>20</edad>
+        <tipo>consulta</tipo>
+    </paciente>
+    <paciente>
+        <nombre>Adios</nombre>
+        <edad>20</edad>
+        <tipo>urgencia</tipo>
+    </paciente>
+    <paciente>
+        <nombre>waos</nombre>
+        <edad>16</edad>
+        <tipo>consulta</tipo>
+    </paciente>
+</hospital>

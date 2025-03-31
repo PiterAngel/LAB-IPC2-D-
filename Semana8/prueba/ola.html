@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Clase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #08ff21;
+            color: rgb(0, 0, 0);
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .objectives-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .objectives-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            color: #555;
+        }
+
+        .objectives-list li:before {
+            content: "✓";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .instructor-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .instructor-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .instructor-details h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Programación Web Avanzada</h1>
+            <p>Curso 2024 - Primer Semestre</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="content-section">
+            <h2>Descripción del Curso</h2>
+            <p>Este curso está diseñado para proporcionar a los estudiantes una comprensión profunda de las tecnologías web modernas y las mejores prácticas en el desarrollo web. A lo largo del semestre, exploraremos conceptos avanzados de programación front-end y back-end.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Objetivos de Aprendizaje</h2>
+            <ul class="objectives-list">
+                <li>Dominar HTML5, CSS3 y JavaScript moderno</li>
+                <li>Desarrollar aplicaciones web responsivas y accesibles</li>
+                <li>Implementar bases de datos y APIs RESTful</li>
+                <li>Comprender frameworks modernos de desarrollo web</li>
+                <li>Aplicar principios de seguridad web</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Información</h2>
+            <div class="instructor-info">
+                <img src="https://placehold.co/120x120" alt="Foto del Instructor" class="instructor-image">
+                <div class="instructor-details">
+                    <h3>Ola
+                    ñññññññññññññññ
+                    </h3>
+                    <p>ola 2</p>
+                    <a href="#" class="contact-button">Ola3r</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

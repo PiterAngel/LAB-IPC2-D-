@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos de Pizza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍕 Sistema de Pedidos de Pizza</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="order-form">
+            <h2>Nuevo Pedido</h2>
+            <div class="error-message" id="errorMessage"></div>
+            <form id="pizzaForm" action="/submit_order" method="POST">
+                <div class="form-group">
+                    <label for="customerName">Nombre del Cliente:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pizzaSize">Tamaño de la Pizza:</label>
+                    <select id="pizzaSize" name="pizzaSize" required>
+                        <option value="small">Pequeña</option>
+                        <option value="medium">Mediana</option>
+                        <option value="large">Grande</option>
+                        <option value="extra-large">Extra Grande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Ingredientes:</label>
+                    <div class="ingredients-container">
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="cheese" name="ingredients" value="cheese">
+                            <label for="cheese">Queso</label>
+                        </div>
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="pepperoni" name="ingredients" value="pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                        </div>
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="mushrooms" name="ingredients" value="mushrooms">
+                            <label for="mushrooms">Champiñones</label>
+                        </div>
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="onions" name="ingredients" value="onions">
+                            <label for="onions">Cebolla</label>
+                        </div>
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="bellPeppers" name="ingredients" value="bellPeppers">
+                            <label for="bellPeppers">Pimiento</label>
+                        </div>
+                        <div class="ingredient-item">
+                            <input type="checkbox" id="olives" name="ingredients" value="olives">
+                            <label for="olives">Aceitunas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Realizar Pedido</button>
+            </form>
+        </div>
+
+        <div class="orders-queue">
+            <h2>Cola de Pedidos</h2>
+            <div id="ordersList">
+                <!-- Los pedidos se insertarán aquí dinámicamente -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

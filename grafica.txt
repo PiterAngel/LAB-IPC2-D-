@@ -1,0 +1,51 @@
+digraph {
+    ranksep="0.1"
+    graph[pad="0.5"];
+    node [fontname="Arial" shape="plain"]
+    edge[dir="none" style="invisible"]
+    NombreEmpresa[label="BANCO DE DESARROLLO NACIONAL" fontcolor=blue]
+    NombrePunto [label="
+Banacional Villa Nueva" fontcolor=blue];
+    TablaPunto [label=<<table border="0" cellborder="0" cellspacing="5">
+    <tr><td>Escritorios</td><td>Clientes</td><td>Tiempo de Espera</td><td>Tiempo de Atencion</td></tr>
+    <tr><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Activos</td><td>Inactivos</td></tr>
+        <tr><td>2</td><td>0</td>    </tr></table></td><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>En espera</td><td>Atendidos</td></tr>
+        <tr><td>5</td><td>0</td></tr></table></td>
+    <td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Minimo</td><td>Promedio</td><td>Maximo</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td>
+    </tr></table></td><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Minimo</td><td>Promedio</td><td>Maximo</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td>
+    </tr></table></td></tr></table>>];
+    NombreEmpresa->NombrePunto
+    NombrePunto->TablaPunto
+    saltoLinea[label="." fontcolor=white]
+    TablaPunto->saltoLinea
+    TablaEscritorio1 [label=<<table border="0" cellborder="0" cellspacing="5">
+        <tr><td><font color="blue">ID: B10    Encargado: Mario Ramírez</font></td></tr>
+    <tr><td><table border="0" cellborder="0" cellspacing="5">
+        <tr><td>Tiempo Atencion</td><td>Clientes</td></tr>
+    <tr><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Minimo</td><td>Promedio</td><td>Maximo</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td>
+    </tr></table></td><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Atendidos</td></tr>
+        <tr><td>0</td>
+    </tr></table></td></tr></table></td></tr></table>>];
+    saltoLinea->TablaEscritorio1
+    TablaEscritorio2 [label=<<table border="0" cellborder="0" cellspacing="5">
+        <tr><td><font color="blue">ID: A20    Encargado: Stephen Hawking</font></td></tr>
+    <tr><td><table border="0" cellborder="0" cellspacing="5">
+        <tr><td>Tiempo Atencion</td><td>Clientes</td></tr>
+    <tr><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Minimo</td><td>Promedio</td><td>Maximo</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td>
+    </tr></table></td><td><table border="0" cellborder="1" cellspacing="0">
+        <tr><td>Atendidos</td></tr>
+        <tr><td>0</td>
+    </tr></table></td></tr></table></td></tr></table>>];
+    TablaEscritorio1->TablaEscritorio2
+}

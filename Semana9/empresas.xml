@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<listaEmpresas>
+   <empresa id="BDR">
+      <nombre>Banco de Desarrollo Nacional</nombre>
+      <abreviatura>Banacional</abreviatura>
+      <listaPuntosAtencion>
+         <puntoAtencion id="VN">
+            <nombre>Banacional Villa Nueva</nombre>
+            <direccion>Plaza Central zona 2</direccion>
+            <listaEscritorios>
+               <escritorio id="B10"> 
+                  <identificacion>B10</identificacion>
+                  <encargado>Mario Ramírez</encargado>
+               </escritorio>
+               <escritorio id="A20"> 
+                  <identificacion>A20</identificacion>
+                  <encargado>Stephen Hawking</encargado>
+               </escritorio>
+            </listaEscritorios>
+         </puntoAtencion>
+         <puntoAtencion id="AMTLN">
+            <nombre>Banacional Amatitlán</nombre>
+            <direccion>Centro comercial El Lago</direccion>
+            <listaEscritorios>
+               <escritorio id="C30"> 
+                  <identificacion>C30</identificacion>
+                  <encargado>Leonardo Da Vinci</encargado>
+               </escritorio>
+               <escritorio id="D40"> 
+                  <identificacion>D40</identificacion>
+                  <encargado>Marie Curie</encargado>
+               </escritorio>
+               <escritorio id="E50"> 
+                  <identificacion>E50</identificacion>
+                  <encargado>Nikola Tesla</encargado>
+               </escritorio>
+               <escritorio id="F60"> 
+                  <identificacion>F60</identificacion>
+                  <encargado>Pitágoras</encargado>
+               </escritorio>
+            </listaEscritorios>
+         </puntoAtencion>
+      </listaPuntosAtencion>
+      <listaTransacciones>
+         <transaccion id="COCH"> 
+            <nombre>Cobro de cheque</nombre>
+            <tiempoAtencion>6</tiempoAtencion>
+         </transaccion>
+         <transaccion id="REEF"> 
+            <nombre>Retiro en efectivo</nombre>
+            <tiempoAtencion>4</tiempoAtencion>
+         </transaccion>
+         <transaccion id="DEEF"> 
+            <nombre>Depósito en efectivo</nombre>
+            <tiempoAtencion>4</tiempoAtencion>
+         </transaccion>
+         <transaccion id="APCU"> 
+            <nombre>Apertura de cuenta bancaria</nombre>
+            <tiempoAtencion>12</tiempoAtencion>
+         </transaccion>
+         <transaccion id="CECU"> 
+            <nombre>Cierre de cuenta bancaria</nombre>
+            <tiempoAtencion>8</tiempoAtencion>
+         </transaccion>
+         <transaccion id="COSE"> 
+            <nombre>Contratación de seguro</nombre>
+            <tiempoAtencion>12</tiempoAtencion>
+         </transaccion>
+      </listaTransacciones>
+   </empresa>
+   <empresa id="TLF">
+      <nombre>Telefónica</nombre>
+      <abreviatura>Movistar</abreviatura>
+      <listaPuntosAtencion>
+         <puntoAtencion id="VN">
+            <nombre>Movistar Villa Nueva</nombre>
+            <direccion>Centro comercial Metrocentro</direccion>
+            <listaEscritorios>
+               <escritorio id="G900"> 
+                  <identificacion>G900</identificacion>
+                  <encargado>Ada Lovelace</encargado>
+               </escritorio>
+               <escritorio id="H800"> 
+                  <identificacion>H800</identificacion>
+                  <encargado>Alexander Fleming</encargado>
+               </escritorio>
+            </listaEscritorios>
+         </puntoAtencion>
+         <puntoAtencion id="AMTLN">
+            <nombre>Movistar Amatitlán</nombre>
+            <direccion>Plaza del Sol</direccion>
+            <listaEscritorios>
+               <escritorio id="I700"> 
+                  <identificacion>I700</identificacion>
+                  <encargado>Thomas Edison</encargado>
+               </escritorio>
+               <escritorio id="J600"> 
+                  <identificacion>J600</identificacion>
+                  <encargado>Gal Gadot</encargado>
+               </escritorio>
+               <escritorio id="K500"> 
+                  <identificacion>K500</identificacion>
+                  <encargado>Scarlett Johansson</encargado>
+               </escritorio>
+               <escritorio id="CR7"> 
+                  <identificacion>CR7</identificacion>
+                  <encargado>Cristiano Ronaldo</encargado>
+               </escritorio>
+            </listaEscritorios>
+         </puntoAtencion>
+      </listaPuntosAtencion>
+      <listaTransacciones>
+         <transaccion id="COSE"> 
+            <nombre>Contratar servicio hogar</nombre>
+            <tiempoAtencion>12</tiempoAtencion>
+         </transaccion>
+         <transaccion id="CASE"> 
+            <nombre>Cancelar servicios</nombre>
+            <tiempoAtencion>7</tiempoAtencion>
+         </transaccion>
+         <transaccion id="PAME"> 
+            <nombre>Pago de factura mensual</nombre>
+            <tiempoAtencion>3</tiempoAtencion>
+         </transaccion>
+         <transaccion id="COPR"> 
+            <nombre>Adquirir dispositivos</nombre>
+            <tiempoAtencion>15</tiempoAtencion>
+         </transaccion>
+      </listaTransacciones>
+   </empresa>
+</listaEmpresas>

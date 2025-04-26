@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block title %}Sistema de Autorización DTE{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Ola XD</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Cargar Archivo</h5>
+            </div>
+            <div class="card-body">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="xmlFile">Seleccione un archivo XML:</label>
+                        <input type="file" class="form-control-file" id="xmlFile" accept=".xml">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cargar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Peticiones</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <button class="list-group-item list-group-item-action" id="btnConsultar">Consultar Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Acciones</h5>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-success mr-2" id="btnEnviar">Enviar</button>
+                <button class="btn btn-danger" id="btnReset">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Resultados</h5>
+            </div>
+            <div class="card-body">
+                <textarea class="form-control" id="resultArea" rows="10" readonly></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        // Upload form submission
+        $('#uploadForm').submit(function(e) {
+            e.preventDefault();
+            const fileInput = $('#xmlFile')[0];
+            if (fileInput.files.length > 0) {
+                const formData = new FormData();
+                formData.append('file', fileInput.files[0]);
+                
+                $.ajax({
+                    url: '/api/cargar-archivo',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        $('#resultArea').val(JSON.stringify(response, null, 2));
+                    },
+                    error: function(error) {
+                        $('#resultArea').val(JSON.stringify(error.responseJSON, null, 2));
+                    }
+                });
+            }
+        });
+        
+        // Button click handlers
+        $('#btnConsultar').click(function() {
+            $.ajax({
+                url: '/api/consultar-datos',
+                type: 'GET',
+                success: function(response) {
+                    $('#resultArea').val(JSON.stringify(response, null, 2));
+                },
+                error: function(error) {
+                    $('#resultArea').val(JSON.stringify(error.responseJSON, null, 2));
+                }
+            });
+        });
+        
+        $('#btnEnviar').click(function() {
+            // Obtener datos del textarea o de otro input
+            const solicitudes = { solicitudes: [] };
+            
+            $.ajax({
+                url: '/api/enviar',
+                type: 'POST',
+                data: JSON.stringify(solicitudes),
+                contentType: 'application/json',
+                success: function(response) {
+                    $('#resultArea').val(JSON.stringify(response, null, 2));
+                },
+                error: function(error) {
+                    $('#resultArea').val(JSON.stringify(error.responseJSON, null, 2));
+                }
+            });
+        });
+        
+        $('#btnReset').click(function() {
+            $.ajax({
+                url: '/api/reset',
+                type: 'POST',
+                success: function(response) {
+                    $('#resultArea').val(JSON.stringify(response, null, 2));
+                },
+                error: function(error) {
+                    $('#resultArea').val(JSON.stringify(error.responseJSON, null, 2));
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
